@@ -249,3 +249,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleccionar todos los enlaces de servicios
+  const serviceLinks = document.querySelectorAll('.services-list a');
+  // Seleccionar la imagen de servicio
+  const serviceImage = document.getElementById('service-image');
+  
+  // Añadir evento click a cada enlace
+  serviceLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Remover la clase 'active' de todos los enlaces
+      serviceLinks.forEach(l => l.classList.remove('active'));
+      
+      // Añadir la clase 'active' al enlace clickeado
+      this.classList.add('active');
+      
+      // Cambiar la imagen según el atributo data-image
+      const newImageSrc = this.getAttribute('data-image');
+      serviceImage.src = newImageSrc;
+      serviceImage.alt = this.textContent;
+    });
+  });
+});

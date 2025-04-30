@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>FERROPAR S.A.</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="FERROPAR S.A. es una empresa líder en la distribución de productos de ferretería y soluciones industriales en Paraguay. Ofrecemos calidad, innovación y servicio al cliente.">
+  <meta name="keywords" content="FERROPAR, ferretería, soluciones industriales, Paraguay, productos industriales, materiales de construcción, ferretería en Paraguay">  
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon"> 
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="assets/img/logos/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/logos/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/logos/favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/logos/favicon.png">
+<meta name="msapplication-TileImage" content="assets/img/logos/favicon.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -31,50 +36,28 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
+  <header id="header" class="header d-flex align-items-center fixed-top" aria-label="Encabezado principal de Ferropar SA">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto" aria-label="Ir a la página principal de Ferropar SA">
+        <!-- Si deseas usar un logo de imagen -->
+        <!-- <img src="assets/img/logo.png" alt="Logo de Ferropar SA"> -->
         <h1 class="sitename">Ferropar SA</h1>
       </a>
-      <img src="ferropar.png" alt="logo de ferropar sa" class="logoferropar" >
       
-      <a href="https://www.hilti.com.py/" target="_blank">
-        <img src="hilti.png" alt="logo de hilti" class="logohilti"> 
+      <img href="index.html" src="assets/img/logos/ferropar.png" alt="Logo de Ferropar SA" class="logoferropar">
+      
+      <a href="https://www.hilti.com.py/" target="_blank" aria-label="Visitar el sitio web de Hilti Paraguay">
+        <img src="assets/img/logos/hilti.png" alt="Logo de Hilti" class="logohilti">
       </a>
-      <nav id="navmenu" class="navmenu">
+
+      <nav id="navmenu" class="navmenu" aria-label="Menú principal de Ferropar SA">
         <ul>
-          <li><a href="index.html#" class="active">INICIO</a></li>
+          <li><a href="index.html" class="active" aria-current="page">INICIO</a></li>
           <li><a href="index.html#about">NOSOTROS</a></li>
           <li><a href="index.html#services">SERVICIOS</a></li>
-          <li><a href="index.html#portfolio">PRODUCTOS</a></li>
-          <li class="dropdown"><a href="#"><span>PROYECTOS</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              
-              <li class="dropdown"><a href="#"><span>Obras Publicas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Puente Heroes del Chaco</a></li>
-                  <li><a href="#">OBRA 2</a></li>
-                  <li><a href="#">OBRA 3</a></li>
-                  <li><a href="#">OBRA 4</a></li>
-                  <li><a href="#">OBRA 5</a></li>
-                </ul>
-                <li class="dropdown"><a href="#"><span>Obras Privadas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">La Perseverancia</a></li>
-                    <li><a href="#">Home Palace</a></li>
-                    <li><a href="#">Dumot</a></li>
-                    <li><a href="#">OBRA 4</a></li>
-                    <li><a href="#">OBRA 5</a></li>
-                  </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="productos.html">PRODUCTOS</a></li>
+          <li><a href="index.html#proyectos">PROYECTOS</a></li>
           <li><a href="portfolio-details.html">EQUIPO COMERCIAL</a></li>
           <li><a href="#contact">CONTACTO</a></li>
         </ul>
@@ -87,10 +70,10 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/vista1.jpeg);">
       <div class="container position-relative">
-        <h1>Servicio de entregas</h1>
-        <p>Contamos con una flota moderna de camiones, incluyendo puente grúa, para garantizar entregas seguras y rápidas.</p>
+        <h1 class="h1_comercial">Servicio de entregas</h1>
+        <p style="color: white;">Contamos con una flota moderna de camiones, incluyendo moviles con grúa, para garantizar entregas seguras y rápidas.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Inicio</a></li>
@@ -102,47 +85,34 @@
 
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
-
       <div class="container">
-
         <div class="row gy-4">
-
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="services-list">
-              <a href="#" class="active">Web Design</a>
-              <a href="#">Software Development</a>
-              <a href="#">Product Management</a>
-              <a href="#">Graphic Design</a>
-              <a href="#">Marketing</a>
+            <div class="services-list" style="border-radius: 50px;">
+              <a href="#" class="active" data-image="assets/img/flota/camiones.webp" style="border-radius: 30px;">Flota de moviles</a>
+              <a href="#" data-image="assets/img/flota/camion_1.webp" style="border-radius: 30px;">Móvil Canter</a>
+              <a href="#" data-image="assets/img/flota/camion_2.webp" style="border-radius: 30px;">Móvil Jac</a>
+              <a href="#" data-image="assets/img/flota/camion_3.webp" style="border-radius: 30px;">Móvil varillero</a>
+              <a href="#" data-image="assets/img/flota/camion_4.webp" style="border-radius: 30px;">Móvil semi con grúa</a>
+              <a href="#" data-image="assets/img/flota/services-2.webp" style="border-radius: 30px;">Móvil semi con grúa</a>
             </div>
-
-            <h4>Enim qui eos rerum in delectus</h4>
-            <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p>
+    
+            <h4>Entregas Eficientes y Seguras</h4>
+            <p>En Ferropar S.A. garantizamos un servicio de entrega de materiales ágil, seguro y adaptado a las necesidades de cada obra. Contamos con una flota propia de móviles con capacidades que van desde 6 toneladas hasta 32 toneladas, además de unidades equipadas con grúas, lo que nos permite responder con precisión a los requerimientos logísticos de obras tanto de menor como de gran envergadura.</p>
           </div>
-
+    
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
+            <img src="assets/img/flota/camiones.webp" alt="Web Design" class="img-fluid services-img" id="service-image" style="border-radius: 30px;">
+            <h3>Entregas Eficientes y Seguras</h3>
             <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              En Ferropar S.A. garantizamos un servicio de entrega de materiales ágil, seguro y adaptado a las necesidades de cada obra. Contamos con una flota propia de móviles con capacidades que van desde 6 toneladas hasta 32 toneladas, además de unidades equipadas con grúas, lo que nos permite responder con precisión a los requerimientos logísticos de obras tanto de menor como de gran envergadura.
             </p>
             <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              Todas nuestras entregas se realizan cumpliendo con estrictas medidas de seguridad, asegurando que los materiales lleguen en tiempo y forma, y en perfectas condiciones, sin importar la complejidad del destino. Nuestra experiencia y compromiso nos convierten en un aliado confiable para el abastecimiento eficiente de sus proyectos.
             </p>
           </div>
-
         </div>
-
       </div>
-
     </section><!-- /Service Details Section -->
 
   </main>
@@ -161,44 +131,32 @@
             <p><strong>Email:</strong> <span>info@ferropar.com.py</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61558151065995" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/ferroparpy/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ferropar-s-a-b6678b281/" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Enlaces útiles</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Nosotros</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terminos y condiciones</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="productos.html">Productos</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nuestros servicios</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Corte y doblado</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicio de entrega</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Asesoria</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Otro servicio</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Otro servicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html">Corte y doblado</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details-ventas.html">Asesoria Comercial</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Boletin informativo</h4>
-          <p>¡Suscríbete a nuestra newsletter y recibe las últimas novedades sobre nuestros productos y servicios!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Suscribirse"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
+        
 
       </div>
     </div>
@@ -209,8 +167,7 @@
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <a href="https://www.codeonstudio.com">Code On Studio</a>
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] --> 
       </div>
     </div>
 
@@ -234,7 +191,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <a href="portfolio-details.html" target="_blank" class="whatsapp-btn">
+  <a href="https://wa.me/595981278308" target="_blank" class="whatsapp-btn">
     <i class="bi bi-whatsapp logo-whatsapp"></i>
     <span class="whatsappt">Contáctanos por WhatsApp</span>
   </a>

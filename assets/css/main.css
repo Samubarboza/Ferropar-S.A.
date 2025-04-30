@@ -770,7 +770,7 @@ body {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: rgb(93, 169, 221);
   font-size: 14px;
   position: relative;
 }
@@ -812,13 +812,13 @@ body {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgb(43, 57, 139);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
+  color: white;
   border-color: var(--accent-color);
 }
 
@@ -826,6 +826,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   position: relative;
+  color:rgb(43, 57, 139);
   padding-bottom: 12px;
 }
 
@@ -843,7 +844,7 @@ body {
   padding-right: 3px;
   font-size: 13px;
   line-height: 0;
-  color: var(--accent-color);
+  color: rgb(43, 57, 139);
 }
 
 .footer .footer-links ul li {
@@ -857,17 +858,18 @@ body {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgb(43, 57, 139);
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: white;
 }
 
 .footer .footer-contact p {
   margin-bottom: 5px;
+  color: rgb(43, 57, 139);
 }
 
 .footer .footer-newsletter .newsletter-form {
@@ -920,6 +922,7 @@ body {
 
 .footer .copyright p {
   margin-bottom: 0;
+  color: rgb(43, 57, 139);
 }
 
 .footer .credits {
@@ -1720,6 +1723,9 @@ a:hover p {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
+.testimonials .testimonial-item p {
+  color: white;
+}
 .testimonials .testimonial-item .stars {
   margin-bottom: 15px;
 }
@@ -1731,7 +1737,7 @@ a:hover p {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: white;
   font-size: 26px;
   line-height: 0;
 }
@@ -2120,19 +2126,19 @@ a:hover p {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
+.portfolio .portfolio-content .portfolio-info .preview-link {
   position: absolute;
-  left: calc(50% - 40px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 26px;
-  top: calc(50% - 14px);
   color: #fff;
   transition: 0.3s;
   line-height: 1.2;
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
+
+.portfolio .portfolio-content .portfolio-info .preview-link:hover {
   color: var(--accent-color);
 }
 
@@ -2467,4 +2473,170 @@ a:hover p {
   width: auto;
   object-fit: contain;
   border-radius: 8px;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Estilos base para las cajas */
+.caja_celeste, .caja_azul {
+  width: 50%;
+  height: 220px;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caja_celeste { background: rgb(93, 169, 221) }
+.caja_azul { background: rgb(43, 57, 139) }
+
+/* Efectos hover */
+.caja_celeste:hover, .caja_azul:hover {
+  animation: latido 0.6s ease;
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes zoom-out {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Para las cajas */
+.caja {
+  transition: transform 0.3s ease;
+}
+
+.caja_azul:hover, .caja_celeste:hover {
+  animation: zoom-in 0.3s forwards;
+}
+
+.caja_azul, .caja_celeste {
+  animation: zoom-out 0.3s forwards; /* Se aplica cuando el mouse sale */
+}
+
+
+
+/* Iconos */
+.bi-rocket,
+.bi-puzzle,
+.bi-hand-thumbs-up,
+.bi-check-circle-fill,
+.bi-file-earmark-check,
+.bi-piggy-bank {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  background-color: whitesmoke;
+  color: rgb(43, 57, 139);
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  margin-top: -35%;
+}
+
+/* Textos */
+.titulo_caja, .subtitle_caja {
+  color: white;
+  font-family: 'Montserrat';
+}
+
+.titulo_caja {
+  font-size: 1.5rem;
+  margin-top: 2.5%;
+}
+
+.subtitle_caja {
+  font-size: 0.9rem;
+}
+
+/* Media Queries para responsive */
+@media (max-width: 1200px) {
+  .contenedor {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .caja_celeste, .caja_azul {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    gap: 25px;
+    padding: 15px;
+  }
+  
+  .caja_celeste, .caja_azul {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .bi-rocket,
+  .bi-puzzle,
+  .bi-hand-thumbs-up,
+  .bi-check-circle-fill,
+  .bi-file-earmark-check,
+  .bi-piggy-bank {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: -45%;
+  }
+  
+  .titulo_caja {
+    font-size: 1.3rem;
+  }
+  
+  .subtitle_caja {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contenedor {
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .bi-rocket,
+  .bi-puzzle,
+  .bi-hand-thumbs-up,
+  .bi-check-circle-fill,
+  .bi-file-earmark-check,
+  .bi-piggy-bank {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    padding: 12px;
+    margin-top: -20%;
+    display: inline-block;
+  }
+  
+  .titulo_caja {
+    font-size: 1.1rem;
+    margin-top: 5%;
+  }
+  
+  .subtitle_caja {
+    font-size: 0.75rem;
+  }
 }
