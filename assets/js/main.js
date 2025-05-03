@@ -274,3 +274,53 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+
+// Formulario de contacto
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.php-email-form');  // Selecciona el formulario
+  const loading = form.querySelector('.loading');  // Selecciona el mensaje de carga
+  const errorMessage = form.querySelector('.error-message');  // Selecciona el mensaje de error
+  const sentMessage = form.querySelector('.sent-message');  // Selecciona el mensaje de éxito
+
+  // Al enviar el formulario
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();  // Evita el envío tradicional del formulario
+
+    // Muestra el mensaje de "cargando"
+    loading.style.display = 'block';
+    errorMessage.style.display = 'none';
+    sentMessage.style.display = 'none';
+
+    // Captura los datos del formulario
+    const formData = new FormData(form);
+
+    // Crea una solicitud AJAX
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', form.action, true);
+
+    // Cuando la solicitud termine
+    xhr.onload = function() {
+      loading.style.display = 'none';  // Oculta el mensaje de carga
+
+      if (xhr.status === 200) {
+        // Respuesta del servidor
+        if (xhr.responseText === "success") {
+          // Si la respuesta es "success", muestra el mensaje de éxito
+          sentMessage.style.display = 'block';
+          form.reset();  // Reinicia el formulario
+        } else {
+          // Si la respuesta no es "success", muestra el mensaje de error
+          errorMessage.style.display = 'block';
+        }
+      } else {
+        // Si hubo un error con la solicitud, muestra el mensaje de error
+        errorMessage.style.display = 'block';
+      }
+    };
+
+    // Envia la solicitud AJAX con los datos del formulario
+    xhr.send(formData);
+  });
+});
