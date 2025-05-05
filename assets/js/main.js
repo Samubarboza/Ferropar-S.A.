@@ -71,7 +71,7 @@
   // Animación on scroll (AOS)
   function aosInit() {
     AOS.init({
-      duration: 500,
+      duration: 450,
       easing: 'ease-in-out',
       once: true,
       mirror: false
